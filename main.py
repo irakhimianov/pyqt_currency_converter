@@ -92,6 +92,7 @@ class Dialog(QtWidgets.QWidget):
         self.setWindowTitle('Справка')
         self.setWindowIcon(QIcon('./icon.ico'))
         self.ui.pushButton.clicked.connect(self.btn_ok)
+        self.ui.tableWidget.setEnabled(False)
         self.ui.tableWidget.setRowCount(len(CURRENCIES))
         self.ui.tableWidget.setColumnCount(len(CURRENCIES[0]))
         row = 0
@@ -100,6 +101,7 @@ class Dialog(QtWidgets.QWidget):
             for item in val:
                 cellinfo = QTableWidgetItem(item)
                 self.ui.tableWidget.setItem(row, col, cellinfo)
+                cellinfo.setTextAlignment(Qt.AlignCenter)
                 cellinfo.setTextAlignment(Qt.AlignHCenter)
                 col += 1
             row += 1

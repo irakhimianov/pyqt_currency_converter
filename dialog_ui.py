@@ -65,7 +65,7 @@ class Ui_Dialog(object):
         font.setBold(True)
         font.setWeight(75)
         self.tableWidget.setFont(font)
-        self.tableWidget.setStyleSheet("color: #fff;")
+        self.tableWidget.setStyleSheet("color: #fff; border: none;")
         self.tableWidget.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.tableWidget.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.tableWidget.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
